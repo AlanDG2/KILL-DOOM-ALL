@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Orbitron:wght@500&family=Roboto:ital,wght@0,100;0,400;0,500;1,300;1,400&family=Rubik+Iso&family=Tilt+Prism&display=swap');
+
+header {
+  padding: 20px;
+  text-align: center;
+}
+header img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #290101;
+  background-image: url("./contenido/test3.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#seleccionar-mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.subtitulo {
+  color: black;
+  font-size: 20px;
+}
+
+.tarjetas {
+  display: flex;
+  gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+  width: 180px;
+  height: 100px;
+  background: #1e0101;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+#seleccionar{
+  font-size: 30px;
+}
+#boton-mascota{
+  margin: 20px;
+  background-image: url("./contenido/slayerlogo.webp");
+  background-size: cover; 
+  padding: 30px 50px; 
+  border: none; 
+  color: rgb(39, 1, 1); 
+  border-radius: 20px;
+}
+.tarjeta-de-mokepon img {
+  width: 80px;
+}
+
+input {
+  display: none;
+}
