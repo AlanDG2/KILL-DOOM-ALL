@@ -4,9 +4,8 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 
 function iniciarJuego() {
- 
-    
-    
+    setTimeout(load,4000)
+       
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'none'
 
@@ -24,38 +23,38 @@ function iniciarJuego() {
     botonTierra.addEventListener('click', ataqueTierra)
 
     let botonReiniciar = document.getElementById('boton-reiniciar')
-    botonReiniciar.addEventListener('click', reiniciarJuego)
+    botonReiniciar.addEventListener('click',reiniciar)
 }
 
 function seleccionarMascotaJugador() {
-    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-arma')
     sectionSeleccionarMascota.style.display = 'none'
     
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'block'
 
-    let inputHipodogo = document.getElementById("hipodoge")
-    let inputCapipepo = document.getElementById("capipepo")
-    let inputRatigueya = document.getElementById("ratigueya")
-    let inputLangostelvis = document.getElementById("langostelvis")
-    let inputTucapalma = document.getElementById("tucapalma")
-    let inputPydos = document.getElementById("ydos")
+    let inputSuperShotgun = document.getElementById("superShotgun")
+    let inputHeavyCannon = document.getElementById("heavyCannon")
+    let inputPlasmaRifle= document.getElementById("plasmaRifle")
+    let inputBloodPunch = document.getElementById("bloodPunch")
+    let inputFlameBelch = document.getElementById("flameBelch")
+    let inputIceBomb = document.getElementById("iceBomb")
     
     let spanMascotaJugador = document.getElementById("mascota-jugador")
 
 
-    if (inputHipodogo.checked) {
-        spanMascotaJugador.innerHTML = "Hipodogo"
-    } else if (inputCapipepo.checked) {
-        spanMascotaJugador.innerHTML = "Capipepo"
-    } else if (inputRatigueya.checked) {
-        spanMascotaJugador.innerHTML = "Ratigueya"
-    } else if (inputLangostelvis.checked) {
-        spanMascotaJugador.innerHTML = "Langostelvis"
-    } else if (inputTucapalma.checked) {
-        spanMascotaJugador.innerHTML = "Tucapalma"
-    } else if (inputPydos.checked) {
-        spanMascotaJugador.innerHTML = "Pydos"
+    if (inputSuperShotgun.checked) {
+        spanMascotaJugador.innerHTML = "superShotgun"
+    } else if (inputHeavyCannon.checked) {
+        spanMascotaJugador.innerHTML = "heavyCannon"
+    } else if (inputPlasmaRifle.checked) {
+        spanMascotaJugador.innerHTML = "plamaRifle"
+    } else if (inputBloodPunch.checked) {
+        spanMascotaJugador.innerHTML = "bloodPunch"
+    } else if (inputFlameBelch.checked) {
+        spanMascotaJugador.innerHTML = "flameBelch"
+    } else if (inputIceBomb.checked) {
+        spanMascotaJugador.innerHTML = "iceBomb"
     } else { alert("Porfavor selecciona una de las mascotas ") }
 
     seleccionarMascotaEnemigo()
@@ -63,20 +62,20 @@ function seleccionarMascotaJugador() {
 
 function seleccionarMascotaEnemigo() {
     let mascotaEnemigo = aleatorio(1, 6)
-    let spanMascotaEnemigo = document.getElementById("nombre-mascota-enemigo")
+    let spanMascotaEnemigo = document.getElementById("mascota-enemigo")
 
     switch (mascotaEnemigo) {
-        case 1: spanMascotaEnemigo.innerHTML = "Hipodogo"
+        case 1: spanMascotaEnemigo.innerHTML = "cacodemon"
             break;
-        case 2: spanMascotaEnemigo.innerHTML = "Capipepo"
+        case 2: spanMascotaEnemigo.innerHTML = "soldier"
             break;
-        case 3: spanMascotaEnemigo.innerHTML = "Ratigueya"
+        case 3: spanMascotaEnemigo.innerHTML = "pinky"
             break;
-        case 4: spanMascotaEnemigo.innerHTML = "Langostelvis"
+        case 4: spanMascotaEnemigo.innerHTML = "arachnotron"
             break;
-        case 3: spanMascotaEnemigo.innerHTML = "Tucapalma"
+        case 3: spanMascotaEnemigo.innerHTML = "carcass"
             break;
-        default: spanMascotaEnemigo.innerHTML = "Pydos"
+        default: spanMascotaEnemigo.innerHTML = "mancubus"
             break;
     }
 
@@ -177,8 +176,11 @@ function vidas() {
 
 }
 
-function reiniciar(){
-    location.reload()
-}
+function load(){
+    let sectionLoad = document.getElementById('gif')
+    sectionLoad.style.display = 'none'
+ }
 
-window.addEventListener('load', iniciarJuego)
+
+
+window.addEventListener('load',iniciarJuego )
